@@ -20,6 +20,15 @@ class MoneyTest(unittest.TestCase):
         self.money2 = Money(50, "USD")
     # Run tests
 
+    def test_add_same_currency(self):
+        result = self.money1.add(self.money1)
+        self.assertEqual(result.amount, 200)
+        self.assertEqual(result.currency, "EUR")
+
+    def test_add_different_currency(self):
+        with self.assertRaises(ValueError):
+            self.money1.add(self.money2)
+
 
 if __name__ == '__main__':
     unittest.main()
