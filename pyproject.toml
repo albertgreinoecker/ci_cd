@@ -1,0 +1,32 @@
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort (Import sorting)
+    "N",   # naming conventions (PEP8)
+    "UP",  # pyupgrade
+    "B",   # bugbear (häufige Fehler)
+    "A",   # builtins überschreiben
+    "C4",  # comprehension optimierungen
+    "SIM", # code simplifications
+    "RET", # return statements
+    "ARG", # unused arguments
+    "PTH", # pathlib statt os
+    "ERA", # auskommentierter Code
+]
+
+ignore = [
+    "E501", # Zeilenlänge (optional, wenn Formatter verwendet wird)
+]
+
+fixable = ["ALL"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
