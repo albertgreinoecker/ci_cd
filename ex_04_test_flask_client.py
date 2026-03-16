@@ -1,5 +1,7 @@
 import unittest
+
 from ex_04_test_flask_server import app
+
 
 class TestFlaskApp(unittest.TestCase):
 

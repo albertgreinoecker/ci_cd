@@ -1,5 +1,6 @@
 import unittest
 
+
 class Money:
     def __init__(self, amount, currency):
         self.amount = amount
